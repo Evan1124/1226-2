@@ -1,0 +1,29 @@
+# 1226-2
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int n;
+	scanf("%d",&n);
+	int x[n];
+	int loop;
+	for(loop=0;loop<n;loop++)
+	{ int m;
+	  scanf("%d",&m);
+	  x[loop]=m;
+	}
+
+	int i;
+	int j;
+	int c;
+	int b;
+    for(loop=0;loop<n;loop++)
+	{
+	for(b=0;b<=x[loop];b++)
+	  for(i=0;i<x[loop];i++)
+	    for(j=0;j<x[loop];j++)
+		   for(c=0;c<x[loop];c++)
+	         if(pow(2,i)*pow(3,j)*pow(5,c)==b)
+	         printf("%d ",b);
+	         printf("\n");}
+	return 0;
+}
